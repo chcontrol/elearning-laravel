@@ -30,6 +30,7 @@
                     <li><a href="#"> <i class="la la-history"></i> Purchase History </a></li>
                     <li><a href="#"> <i class="la la-clipboard-list"></i> Assignments </a></li>
                     <li><a href="#"> <i class="la la-tools"></i> Settings </a></li>
+                    <li><a href="#"> <i class="la la-tools"></i> Calendar </a></li>
                 </ul>
             </div>
 

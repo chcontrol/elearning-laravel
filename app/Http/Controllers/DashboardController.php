@@ -131,6 +131,11 @@ class DashboardController extends Controller
         return view(theme('dashboard.wishlist'), compact('title'));
     }
 
+    public function calendar(){
+        $title = __t('calendar');
+        return view(theme('dashboard.calendar'), compact('title'));
+    }
+
     public function purchaseHistory(){
         $title = __t('purchase_history');
         return view(theme('dashboard.purchase_history'), compact('title'));

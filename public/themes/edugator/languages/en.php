@@ -204,6 +204,7 @@ return [
     'instructor_removed'            => 'Instructor has been removed successfully',
     'enrolled_courses'              => 'Enrolled Courses',
     'wishlist'                      => 'Wishlist',
+    'calendar'                      => 'calendar',
     'earnings'                      => 'Earnings',
     'earning'                       => 'Earning',
     'report'                        => 'Report',

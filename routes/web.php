@@ -242,6 +242,7 @@ Route::group(['prefix'=>'dashboard', 'middleware' => ['auth'] ], function() {
     Route::get('enrolled-courses', 'DashboardController@enrolledCourses')->name('enrolled_courses');
     Route::get('reviews-i-wrote', 'DashboardController@myReviews')->name('reviews_i_wrote');
     Route::get('wishlist', 'DashboardController@wishlist')->name('wishlist');
+    Route::get('calendar', 'DashboardController@calendar')->name('calendar');
 
     Route::get('my-quiz-attempts', 'QuizController@myQuizAttempts')->name('my_quiz_attempts');
 
