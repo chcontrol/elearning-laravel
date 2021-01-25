@@ -246,6 +246,7 @@ return [
 
     'on_demand_video'               => 'on-demand video',
     'course_curriculum'             => 'Course Curriculum',
+    'course_curriculum_th'          => 'เนื้อหาในหลักสูตร',
     'lecture_content_locked'        => 'Lecture content locked',
     'content_locked'                => 'Content locked',
     'if_enrolled_login_text'        => 'If you\'re already enrolled, %s you\'ll need to login. %s',

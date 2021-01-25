@@ -5,40 +5,25 @@
 
     <div class="p-3">
         <div id="gallery" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" style="height: 12rem">
+            <div class="carousel-inner" style="height: 214px">
                 <div class="carousel-item active">
                     <div class="row">
-                        <div class="col">
-                            <img class="img-fluid" src="{{ theme_url('images/test-course-thumb.jpg') }}" alt="Image 2" />
+                        <div class="col" style="height: 214px;">
+                            <img class="img-fluid" src="{{ theme_url('images/home/slider1.png') }}" alt="Image 2" />
                         </div>
                         <div class="col">
-                            <img class="img-fluid" src="{{ theme_url('images/blog_img.jpg') }}" alt="Image 2" />
+                            <img class="img-fluid" src="{{ theme_url('images/home/slider2.png') }}" alt="Image 2" />
                         </div>
-                        <div class="col">
-                            <img class="img-fluid" src="{{ theme_url('images/test-course-thumb.jpg') }}" alt="Image 2" />
-                        </div>
-
-                        <div class="col">
-                            <img class="img-fluid" src="{{ theme_url('images/blog_img.jpg') }}" alt="Image 2" />
-                        </div>
-
                     </div>
                 </div>
 
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col">
-                            <img class="img-fluid" src="{{ theme_url('images/test-course-thumb.jpg') }}" alt="Image 2" />
+                            <img class="img-fluid" src="{{ theme_url('images/home/slider2.png') }}" alt="Image 2" />
                         </div>
                         <div class="col">
-                            <img class="img-fluid" src="{{ theme_url('images/test-course-thumb.jpg') }}" alt="Image 2" />
-                        </div>
-                        <div class="col">
-                            <img class="img-fluid" src="{{ theme_url('images/test-course-thumb.jpg') }}" alt="Image 2" />
-                        </div>
-
-                        <div class="col">
-                            <img class="img-fluid" src="{{ theme_url('images/test-course-thumb.jpg') }}" alt="Image 2" />
+                            <img class="img-fluid" src="{{ theme_url('images/home/slider1.png') }}" alt="Image 2" />
                         </div>
                     </div>
                 </div>

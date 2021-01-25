@@ -42,11 +42,10 @@
 
 <div class="main-navbar-wrap">
     <div style="background-color: #EB763D;padding:20px">
-        
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand site-main-logo" href="{{route('home')}}">
+        <div class="container-fluid" style="background-color: white;">
+            <a style="padding-left: 160px;" class="navbar-brand site-main-logo" href="{{route('home')}}">
                 @php
                     $logoUrl = media_file_uri(get_option('site_logo'));
                 @endphp
@@ -129,7 +128,7 @@
                         <li class="nav-item mr-2 ml-2">
                             <a class="nav-link btn btn-login-outline" 
                             style="border-color: #EB763D; border-radius: 5px; padding-left:2em; padding-right:2em;border-width: 3px;" 
-                            href="{{route('login')}}"> {{__t('ล๊อคอิน')}}</a>
+                            href="{{route('login')}}"> {{__t('login')}}</a>
                             {{-- <a class="nav-link btn btn-login-outline" href="{{route('login')}}"> <i class="la la-sign-in"></i> {{__t('login123')}}</a> --}}
                         </li>
                         {{-- <li class="nav-item">
