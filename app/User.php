@@ -65,11 +65,6 @@ class User extends Authenticatable
         return $this->belongsToMany(Course::class, 'wishlists');
     }
 
-    public function calendar(){
-        return $this->belongsToMany(Course::class, 'wishlists');
-    }
-
-
     public function earnings(){
         return $this->hasMany(Earning::class, 'instructor_id')->where('payment_status', 'success');
     }

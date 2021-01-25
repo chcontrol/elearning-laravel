@@ -1,16 +1,19 @@
 
 <div class="dashboard-wrap">
-
     <div class="container py-4">
         <div class="row">
             <div class="col-3 dashboard-menu-col">
                 <ul class="dashboard-menu">
 
                     <li class="{{request()->is('dashboard') ? 'active' : ''}}"><a href="{{route('dashboard')}}"> <i class="la la-dashboard"></i> Dashboard </a></li>
+                    <li class="{{request()->is('dashboard') ? 'active' : ''}}"><a href="{{route('dashboard')}}"> <i class="la la-dashboard"></i> Dashboard </a></li>
 
                     @if($auth_user->isInstructor())
                         <li class="{{request()->is('dashboard/courses/*') ? 'active' : ''}}">
                             <a href="{{route('create_course')}}"> <i class="la la-chalkboard-teacher"></i> Create new Course </a>
+                        </li>
+                        <li>
+                            <a href="{{route('create_course')}}"> <i class="la la-chalkboard-teacher"></i> Create new Course Test </a>
                         </li>
                         <li class="{{request()->is('dashboard/my-courses*') ? 'active' : ''}}">
                             <a href="{{route('my_courses')}}"> <i class="la la-graduation-cap"></i> {{__t('my_courses')}} </a>
@@ -30,7 +33,6 @@
                     <li><a href="#"> <i class="la la-history"></i> Purchase History </a></li>
                     <li><a href="#"> <i class="la la-clipboard-list"></i> Assignments </a></li>
                     <li><a href="#"> <i class="la la-tools"></i> Settings </a></li>
-                    <li><a href="#"> <i class="la la-tools"></i> Calendar </a></li>
                 </ul>
             </div>
 

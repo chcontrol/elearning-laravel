@@ -1,5 +1,5 @@
 
-<footer>
+<footer hidden>
 
     <div class="footer-top py-5">
 

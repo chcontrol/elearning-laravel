@@ -6,8 +6,8 @@
     --a-color : #216094;
     --a-hover-color : #218ff6;
 
-    --btn-theme-primary-bg : #2073d4;
-    --btn-theme-primary-hover-bg : #005bbe;
+    --btn-theme-primary-bg : #EB763D;
+    --btn-theme-primary-hover-bg : #f6712f;
 }
 
 body{
@@ -122,13 +122,12 @@ ul{
     color: #fff !important;
 }
 .navbar{
-    padding: 10px 0 !important;
+    padding: 1px 0 !important;
 }
 .site-main-logo img{
-    height: 3.5rem;
-    max-height: 3.5rem;
+    height: 50px;
+    max-height: 50px;
     width: auto;
-    padding-left: 1rem;
 }
 /**
 * Top categories menu

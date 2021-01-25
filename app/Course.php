@@ -237,7 +237,7 @@ class Course extends Model
         }
         $price_html .= '</div>';
 
-        $price_html = " <span class='current-price'>{$this->price}</span>";
+        $price_html = " <span class='current-price '>{$this->price}</span>";
 
         return $price_html;
     }

@@ -5,6 +5,10 @@
     $menus = dashboard_menu();
     @endphp
 
+<li >
+    <a href="../../calendar"> Calendar </a>
+</li>
+
     @if(is_array($menus) && count($menus))
         @foreach($menus as $key => $instructor_menu)
             <li class="{{array_get($instructor_menu, 'is_active') ? 'active' : ''}}">

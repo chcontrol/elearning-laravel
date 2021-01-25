@@ -2,13 +2,13 @@
 
 <div class="dashboard-wrap">
 
-    <div class="container py-4">
+    <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-3 dashboard-menu-col">
+            <div class="col-2 dashboard-menu-col">
                 @include(theme('dashboard.sidebar-menu'))
             </div>
 
-            <div class="col-9">
+            <div class="col-10">
                 @include('inc.flash_msg')
                 @yield('content')
             </div>

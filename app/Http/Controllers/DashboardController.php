@@ -8,9 +8,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
+use App\Booking;
+use Redirect, Response;
+
 class DashboardController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $title = __t('dashboard');
 
         $user = Auth::user();
@@ -64,12 +68,24 @@ class DashboardController extends Controller
         return view(theme('dashboard.dashboard'), compact('title', 'chartData'));
     }
 
-    public function profileSettings(){
+    public function calendar()
+    {
+        $title = __t('dashboard');
+        $chartData = null;
+
+        return view(theme('dashboard.calendar'), compact('title', 'chartData'));
+
+        // return view('fullcalendar');
+    }
+
+    public function profileSettings()
+    {
         $title = __t('profile_settings');
         return view(theme('dashboard.settings.profile'), compact('title'));
     }
 
-    public function profileSettingsPost(Request $request){
+    public function profileSettingsPost(Request $request)
+    {
         $rules = [
             'name'      => 'required',
             'email'      => 'required|email',
@@ -85,13 +101,15 @@ class DashboardController extends Controller
         return back()->with('success', __t('success'));
     }
 
-    public function resetPassword(){
+    public function resetPassword()
+    {
         $title = __t('reset_password');
         return view(theme('dashboard.settings.reset_password'), compact('title'));
     }
 
-    public function resetPasswordPost(Request $request){
-        if(config('app.is_demo')){
+    public function resetPasswordPost(Request $request)
+    {
+        if (config('app.is_demo')) {
             return redirect()->back()->with('error', 'This feature has been disable for demo');
         }
         $rules = [
@@ -104,10 +122,10 @@ class DashboardController extends Controller
         $old_password = clean_html($request->old_password);
         $new_password = clean_html($request->new_password);
 
-        if(Auth::check()) {
+        if (Auth::check()) {
             $logged_user = Auth::user();
 
-            if(Hash::check($old_password, $logged_user->password)) {
+            if (Hash::check($old_password, $logged_user->password)) {
                 $logged_user->password = Hash::make($new_password);
                 $logged_user->save();
                 return redirect()->back()->with('success', __t('password_changed_msg'));
@@ -116,35 +134,34 @@ class DashboardController extends Controller
         }
     }
 
-    public function enrolledCourses(){
+    public function enrolledCourses()
+    {
         $title = __t('enrolled_courses');
         return view(theme('dashboard.enrolled_courses'), compact('title'));
     }
 
-    public function myReviews(){
+    public function myReviews()
+    {
         $title = __t('my_reviews');
         return view(theme('dashboard.my_reviews'), compact('title'));
     }
 
-    public function wishlist(){
+    public function wishlist()
+    {
         $title = __t('wishlist');
         return view(theme('dashboard.wishlist'), compact('title'));
     }
 
-    public function calendar(){
-        $title = __t('calendar');
-        return view(theme('dashboard.calendar'), compact('title'));
-    }
-
-    public function purchaseHistory(){
+    public function purchaseHistory()
+    {
         $title = __t('purchase_history');
         return view(theme('dashboard.purchase_history'), compact('title'));
     }
 
-    public function purchaseView($id){
+    public function purchaseView($id)
+    {
         $title = __a('purchase_view');
         $payment = Payment::find($id);
         return view(theme('dashboard.purchase_view'), compact('title', 'payment'));
     }
-
 }

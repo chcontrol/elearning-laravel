@@ -194,6 +194,8 @@ class PostController extends Controller
         return view(theme('blog'), compact('title', 'posts'));
     }
 
+   
+
     public function authorPosts($id){
         $posts = Post::whereType('post')->whereUserId($id)->paginate(20);
         $user = User::find($id);

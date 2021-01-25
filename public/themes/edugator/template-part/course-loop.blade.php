@@ -9,7 +9,7 @@ $gridClass = $grid_class ? $grid_class : 'col-md-2';
 
         <div class="course-card-img-wrap">
             <a href="{{route('course', $course->slug)}}">
-                <img src="{{$course->thumbnail_url}}" class="img-fluid" />
+                <img src="{{$course->thumbnail_url}}"  style="min-height: 137px; height:137px" />
             </a>
 
             {{-- <button class="course-card-add-wish btn btn-link btn-sm p-0" data-course-id="{{$course->id}}">
@@ -61,9 +61,10 @@ $gridClass = $grid_class ? $grid_class : 'col-md-2';
             </div>
 
             <div class="course-card-footer mt-3 h6 text-right">
-
+               
+                
                 <span >
-                    <a style="font-size: 0.8rem" href="{{route('profile', $course->user_id)}}">{{$course->author->name}}</a>
+                    <a style="font-size: 0.8rem;color: #9BA3B5 " href="{{route('profile', $course->user_id)}}">{{$course->author->name}}</a>
                 </span>
                 {{-- <div class="course-card-cart-wrap d-flex justify-content-between">
                     {!! $course->price_html(false, false) !!}

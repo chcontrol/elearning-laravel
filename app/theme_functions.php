@@ -67,7 +67,6 @@ function dashboard_menu(){
             'icon' => '<i class="la la-pencil-square-o"></i>',
             'is_active' => request()->is('dashboard/enrolled-courses*'),
         ],
-        
         'wishlist' => [
             'name' => __t('wishlist'),
             'icon' => '<i class="la la-heart-o"></i>',
@@ -92,11 +91,6 @@ function dashboard_menu(){
             'name' => __t('settings'),
             'icon' => '<i class="la la-tools"></i>',
             'is_active' => request()->is('dashboard/settings*'),
-        ],
-        'calendar' => [
-            'name' => __t('calendar'),
-            'icon' => '<i class="la la-pencil-square-o"></i>',
-            'is_active' => request()->is('dashboard/enrolled-wishlist*'),
         ],
     ]);
 

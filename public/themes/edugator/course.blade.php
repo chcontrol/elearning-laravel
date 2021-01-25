@@ -16,7 +16,7 @@
                         @if($course->short_description)
                             <p class="page-header-subtitle m-0">{{clean_html($course->short_description)}}</p>
                         @endif
-
+{{-- 
                         <p class="mt-3 course-head-meta-wrap">
                             <span><i class="la la-signal"></i> {{course_levels($course->level)}} </span>
                         </p>
@@ -30,14 +30,14 @@
                                 <i class="la la-clock"></i>
                                 {{__t('last_updated')}} {{$course->last_updated_at->format(date_time_format())}}
                             </span>
-                        </p>
+                        </p> --}}
 
                     </div>
                 </div>
 
                 <div class="col-md-4">
 
-                    <div class="page-header-right-enroll-box p-3 mt-sm-4 mt-md-0 bg-white shadow">
+                    <div hidden class="page-header-right-enroll-box p-3 mt-sm-4 mt-md-0 bg-white shadow">
 
                         @if( $isEnrolled)
                             <p class="text-muted"><strong>Enrolled At</strong> : {{date('F d, Y', strtotime($isEnrolled->enrolled_at))}} </p>

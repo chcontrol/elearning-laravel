@@ -146,6 +146,12 @@ a.navbar-brand{
         -ms-flex: 1;
             flex: 1;
 }
+
+.page-header .page-header-center{
+    -webkit-box-flex: 12;
+        -ms-flex: 1;
+            flex: 1;
+}
 .navbar-default.sidebar{
     -webkit-box-flex: 0;
         -ms-flex: 0 0 250px;
